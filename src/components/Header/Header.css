@@ -1,0 +1,120 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  background-color: rgb(37, 37, 37);
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 1%;
+  position: relative;
+}
+
+.navbar > h2 {
+    color: rgb(199, 199, 199);
+}
+
+.navbar-lists {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-lists > ul {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+.list-item {
+  list-style: none;
+  color: lightblue;
+  font-size: 1rem;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.list-item:hover{
+    color: white;
+}
+
+.searchBar > input {
+    padding: 10px;
+}
+
+.menuBar {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  right: 1rem;
+  /* background: red; */
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuBar > span {
+  height: 2px;
+  width: 30px;
+  background: white;
+  position: relative;
+}
+
+.menuBar > span::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  background: white;
+  transform: translateY(-10px);
+  justify-content: center;
+  transition: all .5s ease-out;
+}
+
+.menuBar > span::before {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  background: white;
+  transform: translateY(10px);
+  transition: all .5s ease-out;
+}
+
+
+
+@media (max-width: 600px) {
+  /* .navbar {
+    flex-direction: column;
+  }  */
+  .navbar-lists {
+    flex-direction: column;
+    position: absolute;
+    background-color: #252525;
+    right: 0;
+    top: -17.9rem;
+    padding: 10px;
+    transition: all .5s ease-out;
+  }
+  .navbar-lists > ul{
+    flex-direction: column;
+  }
+  .list-item {
+    /* color: #55bd96; */
+    padding: 10px;
+  }
+  .showNavbarList{
+    top: 2.1rem;
+  }
+  .closeIcon > span {
+    background: none;
+  }
+  .closeIcon > span::after {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+    background: white;
+  }
+  .closeIcon > span::before {
+    transform: translateY(0) rotate(-45deg);
+    opacity: 1;
+    background: white;
+  }
+}
