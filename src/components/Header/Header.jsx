@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -7,6 +8,11 @@ const Header = () => {
   const openAndCloseNavbar = () => {
     setAddClass(!addClass);
   };
+
+  const cssForLink = {
+    textDecoration: "none",
+  };
+
   return (
     <nav className="navbar">
       <h2>Navbar</h2>
@@ -14,16 +20,23 @@ const Header = () => {
         className={addClass ? "navbar-lists showNavbarList" : "navbar-lists"}
       >
         <ul>
-          <li className="list-item">Home</li>
+          <Link style={cssForLink} to="/">
+            <li className="list-item">Home</li>
+          </Link>
           <li className="list-item">Features</li>
           <li className="list-item">Pricing</li>
-          <li className="list-item">Contact Us</li>
+          <Link style={cssForLink} to="/contact-us">
+            <li className="list-item">Contact Us</li>
+          </Link>
         </ul>
         <div className="searchBar">
           <input type="search" placeholder="Search" />
         </div>
       </div>
-      <div className={addClass ? "menuBar closeIcon" : "menuBar"} onClick={openAndCloseNavbar} >
+      <div
+        className={addClass ? "menuBar closeIcon" : "menuBar"}
+        onClick={openAndCloseNavbar}
+      >
         <span></span>
       </div>
     </nav>

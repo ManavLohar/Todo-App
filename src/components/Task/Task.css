@@ -1,0 +1,19 @@
+.task-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-item{
+    height: 200px;
+    width: 200px;
+    background: white;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

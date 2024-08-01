@@ -1,0 +1,188 @@
+.form-validation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 6%;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background: rgb(224, 217, 203);
+  height: 100%;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background: #f9f7f3;
+  padding: 2rem;
+}
+
+.form-box > h1 {
+  font-size: 2.5rem;
+  color: #d9bf8e;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.form-box > button {
+  display: flex;
+  font-size: 1.2rem;
+  width: 50%;
+  align-self: center;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #d9c8a9;
+  color: #424242;
+  transition: all 0.3s;
+}
+
+.form-box > button:hover {
+  background: #dbc18f;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box > label {
+  font-size: 0.8rem;
+  color: rgb(100, 100, 100);
+}
+
+.input-box > input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid rgb(218, 218, 218);
+  outline: none;
+  /* width: 15rem; */
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: red;
+  margin-bottom: 5px;
+}
+
+.input-box > textarea {
+  border: 1px solid rgb(218, 218, 218);
+  font-size: 0.8rem;
+}
+
+.img-box {
+  display: flex;
+  flex: 1;
+  width: 50%;
+  height: 100%;
+}
+
+.img-box img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.usersBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.users{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  background: white;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.users >:nth-child(1) > p {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: url('./pngwing.com.png') center center / cover;
+}
+
+.user-data{
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+}
+
+.user-data > strong{
+  width: 30%;
+}
+
+.user-data > p{
+  width: 70%;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  margin-left: 10px;
+  word-wrap: break-word;
+  color: rgb(44, 44, 44);
+}
+
+@media (max-width: 800px) {
+  .container{
+    position: relative;
+  }
+  .form-box{
+    width: 85%;
+  }
+  .form-body{
+    position: relative;
+    z-index: 1;
+    background: none;
+  }
+  .img-box{
+    position: absolute;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-box{
+    padding: 1rem;
+  }
+  .form-box > h1{
+    font-size: 1.8rem;
+  }
+  .input-box > input {
+    padding: 5px;
+  }
+  .form-box > button{
+    font-size: 1rem;
+  }
+}

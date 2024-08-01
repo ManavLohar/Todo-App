@@ -1,6 +1,6 @@
 import React from "react";
 import "./EmployeeDetails.css";
-import { productData } from "../../data";
+import { productData } from "./EmployeeData/data"
 
 const EmployeeDetails = () => {
   return (
